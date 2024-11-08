@@ -5,7 +5,7 @@
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <title>WorldNews</title>
+        <title>${requestScope.category.name} - WorldNews</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/main.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,14 +23,9 @@
                 </a>
                 <a href="#" class="login-button">Login</a>
             </nav>
-            <aside class="categories">
-                <ul>
-                    <c:forEach var="category" items="${requestScope.categories}">
-                        <li><a href="${pageContext.request.contextPath.concat('/category?id=').concat(category.id)}">${category.name}</a></li>
-                    </c:forEach>
-                </ul>
-            </aside>
             <main>
+                <h1>${requestScope.category.name}</h1>
+                <p>${requestScope.category.description}</p>
                 <c:forEach var="discovery" items="${requestScope.discoveries}">
                     <article class="discovery">
                         <h2 class="discovery-header"><c:out value="${discovery.title}"/></h2>
