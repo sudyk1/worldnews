@@ -9,17 +9,17 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/forms.css">
     <body>
         <div class="container">
-            <%@ include file="../segments/header.jspf"%>>
+            <%@ include file="../segments/header.jspf"%>
 
             <form action="j_security_check" method="post" class="user-form">
-                <h2 class="user-form-title">Sign up to WorldNews</h2>
+                <h2 class="user-form-title">Login to WorldNews</h2>
                 <input name="j_username" placeholder="Username" required>
                 <input name="j_password" placeholder="password" type="password" required>
                 <button class="user-form-button">Login</button>
-                <p>Don't have account? <a href="${pageContext.request.contextPath}/signup">Register</a></p>
+                <p>Don't have an account? <a href="${pageContext.request.contextPath}/signup">Register</a></p>
             </form>
 
-            <%@ include file="../segments/footer.jspf"%>>
+            <%@ include file="../segments/footer.jspf"%>
         </div>
     </body>
 </html>

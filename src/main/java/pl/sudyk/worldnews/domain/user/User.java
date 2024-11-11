@@ -36,6 +36,10 @@ public class User {
         return password;
     }
 
+    public void setPassword(String sha256Password) {
+        this.password = sha256Password;
+    }
+
     public LocalDateTime getRegistrationDate() {
         return registrationDate;
     }
