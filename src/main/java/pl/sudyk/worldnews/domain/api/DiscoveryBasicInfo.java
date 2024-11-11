@@ -3,19 +3,29 @@ package pl.sudyk.worldnews.domain.api;
 import java.time.LocalDateTime;
 
 public class DiscoveryBasicInfo {
+    private Integer id;
     private String title;
     private String url;
     private String description;
     private LocalDateTime dateAdded;
+    private int voteCount;
 
-    public DiscoveryBasicInfo(String title,
+    public DiscoveryBasicInfo(Integer id,
+                              String title,
                               String url,
                               String description,
-                              LocalDateTime dateAdded) {
+                              LocalDateTime dateAdded,
+                              int voteCount) {
+        this.id = id;
         this.title = title;
         this.url = url;
         this.description = description;
         this.dateAdded = dateAdded;
+        this.voteCount = voteCount;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -32,5 +42,9 @@ public class DiscoveryBasicInfo {
 
     public LocalDateTime getDateAdded() {
         return dateAdded;
+    }
+
+    public int getVoteCount() {
+        return voteCount;
     }
 }
