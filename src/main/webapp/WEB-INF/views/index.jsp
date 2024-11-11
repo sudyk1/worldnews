@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <title>WorldNews</title>
         <%@ include file="../segments/stylesheets.jspf" %>
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/add-button.css">
     </head>
     <body>
         <div class="container">
