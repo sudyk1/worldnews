@@ -1,10 +1,7 @@
 package pl.sudyk.worldnews.domain.discovery;
 
-import pl.sudyk.worldnews.config.DataSourceProvider;
 import pl.sudyk.worldnews.domain.common.BaseDao;
 
-import javax.naming.NamingException;
-import javax.sql.DataSource;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
