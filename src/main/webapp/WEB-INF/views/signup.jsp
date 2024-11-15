@@ -9,7 +9,7 @@
       <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/forms.css">
     <body>
         <div class="container">
-          <%@ include file="../segments/header.jspf"%>>
+          <%@ include file="../segments/header.jspf"%>
 
           <form action="${pageContext.request.contextPath}/signup" method="post" class="user-form">
             <h2 class="user-form-title">Sign up to WorldNews</h2>
@@ -19,7 +19,7 @@
             <button class="user-form-button">Sign Up</button>
           </form>
 
-          <%@ include file="../segments/footer.jspf"%>>
+          <%@ include file="../segments/footer.jspf"%>
         </div>
     </body>
 </html>
