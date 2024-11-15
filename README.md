@@ -35,11 +35,10 @@ WorldNews is a Reddit-like web application written in Jakarta EE. Users can crea
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/worldnews.git
-2. To create a MySQL database run the provided SQL script in
+2. To create a MySQL database and to set up tables, run the provided SQL script in
     ```bash
-    src/main/resources/db/schema.sql 
-to set up tables.
-
+    src/main/resources/db/schema.sql
+    
 3. Update web.xml or configuration files with your database credentials.
 
 4. Build the project (.war file)
