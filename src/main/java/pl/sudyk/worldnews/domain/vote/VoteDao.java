@@ -32,7 +32,7 @@ public class VoteDao extends BaseDao {
 
     public int countByDiscoveryId(int discoveryId) {
         final String query = """
-                SELECT 
+                SELECT
                     (SELECT COUNT(discovery_id) FROM vote WHERE discovery_id = ? AND type = 'UP') -
                     (SELECT COUNT(discovery_id) FROM vote WHERE discovery_id = ? AND type = 'DOWN')
                 AS

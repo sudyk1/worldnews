@@ -34,7 +34,7 @@ public class AddDiscoveryController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         DiscoverySaveRequest saveRequest = createSaveRequest(req);
         discoveryService.add(saveRequest);
         resp.sendRedirect(req.getContextPath() + "/");

@@ -76,7 +76,7 @@ public class UserDao extends BaseDao {
 
     public Optional<User> findById(int id) {
         final String query = """
-                SELECT 
+                SELECT
                     id, username, email, password, registration_date
                 FROM
                     user

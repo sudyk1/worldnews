@@ -20,7 +20,7 @@ public class SignupController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         UserRegistration userRegistration = getUserData(req);
         userService.register(userRegistration);
         resp.sendRedirect(req.getContextPath());

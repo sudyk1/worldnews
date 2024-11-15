@@ -1,6 +1,5 @@
 package pl.sudyk.worldnews.client.vote;
 
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.HttpMethodConstraint;
 import jakarta.servlet.annotation.ServletSecurity;
 import jakarta.servlet.annotation.WebServlet;
@@ -22,7 +21,7 @@ public class DiscoveryVoteController extends HttpServlet {
     private DiscoveryVoteService voteService = new DiscoveryVoteService();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         DiscoveryVote discoveryVote = createDiscoveryVote(req);
         voteService.addVote(discoveryVote);
         resp.sendRedirect(req.getContextPath() + "/");
@@ -32,7 +31,6 @@ public class DiscoveryVoteController extends HttpServlet {
         Integer discoveryId = Integer.valueOf(req.getParameter("id"));
         String voteType = req.getParameter("type");
         String username = req.getUserPrincipal().getName();
-        DiscoveryVote discoveryVote = new DiscoveryVote(username, discoveryId, voteType);
-        return discoveryVote;
+        return new DiscoveryVote(username, discoveryId, voteType);
     }
 }

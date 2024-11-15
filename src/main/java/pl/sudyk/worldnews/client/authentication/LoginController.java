@@ -1,6 +1,5 @@
 package pl.sudyk.worldnews.client.authentication;
 
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.HttpMethodConstraint;
 import jakarta.servlet.annotation.ServletSecurity;
 import jakarta.servlet.annotation.WebServlet;
@@ -18,7 +17,7 @@ import java.io.IOException;
 )
 public class LoginController extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.sendRedirect(req.getContextPath());
     }
 }
