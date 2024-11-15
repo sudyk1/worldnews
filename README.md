@@ -39,6 +39,7 @@ WorldNews is a Reddit-like web application written in Jakarta EE. Users can crea
     ```bash
     src/main/resources/db/schema.sql 
 to set up tables.
+
 3. Update web.xml or configuration files with your database credentials.
 
 4. Build the project (.war file)
